@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>simpleCode | Unidos pelo conhecimento </title>
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/cZ19cE9.png" />
+<link href="styles/style.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src="./scripts/desafio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./scripts/cards_index.js"></script>
+<script>
+let obj = JSON.parse(localStorage.getItem("obj_curso"));
+console.log("DEBUG: PESQUISA.HTML VALOR OBJ", obj);
+if (!obj) {
+console.log("ERRO: OBJ VAZIO");
+} else {
+console.log("DEBUG: ", obj)
+const Id = obj.id;
+const Titulo = obj.titulo;
+const Nome = obj.nome;
+const Idioma = obj.idioma;
+const Conteudo = obj.conteudo;
+const Tags = obj.tags;
+
+$("#table-cursos").append(`
+<td>${Titulo}</td>
+<td>${Nome}</td>
+<td>${Idioma}</td>
+<td>${Conteudo}</td>
+<td>${Tags}</td>
+</tr>`);
+}
+</script>
+<style>
+.desafios_page h1 {
+margin-top: 3rem;
+}
+
+.espacamento {
+margin-bottom: 24rem;
+}
+
+.desafios_corpo {
+margin: 8rem 0rem;
+}
+
+.desafio {
+margin-left: 10.2rem;
+}
+
+.desafio_title {
+font-size: 4rem;
+margin: 4rem 0px;
+}
+
+.desafio_para {
+font-size: 1.25rem;
+}
+
+.answer {
+margin: 3rem 0rem;
+padding: 0.5rem;
+width: 100%;
+border: none;
+}
+
+.desafio_answer {
+font-size: 16px;
+color: white;
+margin: 20px 10px 16px;
+padding: 6px 12px;
+width: 100%;
+border: 3px solid #8157E6;
+}
+</style>
+</head>
+
+<body>
+<div class="preloader"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-devlearn" style=" box-shadow: 0 0 20px #121214;">
+<div class="container">
+<a class="navbar-brand" href="/src/main/resources/index.html">
+<img src="https://i.imgur.com/KYkZs10.png" width="280">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="#!">
+<button class="btn btn-roxo font-weight-bold" data-toggle="modal"
+data-target="#miModal">ÁREA DO MEMBRO</button>
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+<div class="py-4 py-lg-6 bg-roxo">
+<div class="container">
+<div class="row">
+<div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+<div class="d-lg-flex align-items-center justify-content-between">
+<div class="mb-4 mb-lg-0">
+<h1 class="text-white mb-1">Desafio do aprendizado</h1>
+<p class="mb-0 text-white">
+Faça um teste desafio que idealizamos em cima do que você aprendeu na plataforma!
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="desafios_page">
+<div style="opacity: 0;">
+<center>
+<h1>
+<span style="background-color: #8157E6; font-size: 18px; border-radius: 20px; padding: 10px;">
+Desafios</span>
+</h1>
+</center>
+</div>
+<div id="desafios">
+
+</div>
+<div class="desafios_corpo">
+<center>
+   <div class="col-md-5 col-12 pl-md-0">
+<button class="btn btn-fz-desafio" id="btn_novo_desafio" onclick="carregarCurso()">Iniciar um
+desafio</button>
+</div>
+</center>
+</div>
+<div class="espacamento"></div>
+</div>
+
+<!--  -->
+<div class="modal fade text-center bg-cover2" style="border-radius: 0px; background-image: url(assets/fundo-in.png);" id="miModal" tabindex="-1" role="dialog" aria-labelledby="modal_login"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="modal-content">
+
+<div class="modal-body">
+<form id="login-form" class="mt-4" onsubmit="loginUser(this)">
+<center>
+<img class="img-fluid mb-2" width="100" src="https://i.imgur.com/cZ19cE9.png">
+<h5 class="text-white titulo-roxo mb-4">Olá, seja <strong>bem-vindo(a)</strong>!</h5>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> digite seu e-mail</span>
+<input type="password" class="form-control login">
+</div>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> agora, sua senha</span>
+<input type="password" class="form-control login" name="password" id="password"
+placeholder="********">
+</div>
+<button type="submit" class="btn btn-entrar btn-block"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+<button type="button" class="btn btn-cadastre-modal btn-sm"><i class="fas fa-plus"></i> Novo? Cadastre-se!</button>
+<br>
+<a href="#"><label class="esqueceu-senha">Esqueceu sua senha?</label></a>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="py-5 bg-devlearn mt-6">
+<div class="container">
+<p class="m-0 text-center text-white footer">
+<img class="img-fluid" width="60" src="https://i.imgur.com/cZ19cE9.png">
+<br>
+2021 © <strong>simpleCode</strong>. Todos os direitos reservados.
+<br>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-facebook"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-twitter"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-youtube"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-instagram"></i>
+</button>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/cadastrar-usuarios.js"></script>
+<script src="./scripts/busca.js"></script>
+<script src="./scripts/salvos.js"></script>
+<script src="./scripts/desafio.js"></script>
+<script>
+$(document).ready(function() {
+$('.preloader').addClass("hide");
+});
+
+function usuarioLogadoIndex() {
+var usuarioCorrenteLocal = JSON.parse(localStorage.getItem("usuarioCorrente"));
+var usuarioCorrenteSession = JSON.parse(sessionStorage.getItem("usuarioCorrente"))
+if (usuarioCorrenteLocal || usuarioCorrenteSession) {
+window.location.href = "index-logado.html";
+}
+}
+document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+</script>
+</body>
+
+</html>

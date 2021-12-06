@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>simpleCode | Unidos pelo conhecimento </title>
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/cZ19cE9.png" />
+<link href="styles/style.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src="./scripts/desafio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./scripts/cards_index.js"></script>
+</head>
+
+<script>
+
+function LoginValidator(user, password, form_name)
+{
+
+var baseurl = "http://localhost:5433/usuario"
+
+var yourForm = document.getElementById(form_name);
+
+yourForm.action = baseurl
+
+return yourForm
+
+}
+</script>
+
+<body>
+<div class="preloader"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-devlearn" style=" box-shadow: 0 0 20px #121214;">
+<div class="container">
+<a class="navbar-brand" href="/src/main/resources/index.html">
+<img src="https://i.imgur.com/KYkZs10.png" width="280">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="!#">
+<button class="btn btn-roxo font-weight-bold" data-toggle="modal"
+data-target="#miModal">ÁREA DO MEMBRO</button>
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+<div class="py-4 py-lg-6 bg-roxo">
+<div class="container">
+<div class="row">
+<div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+<div class="d-lg-flex align-items-center justify-content-between">
+<div class="mb-4 mb-lg-0">
+<h1 class="text-white mb-1">Crie sua conta</h1>
+<p class="mb-0 text-white">
+Faça parte da comunidade mais engajada em busca do aprendizado!
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="col-xl-12">
+
+<div class="card mt-5">
+<div class="card-body">
+<h5 class="card-title" style="font-size: 15px;">> Olá, seja <strong> bem vindo(a)</strong>!</h5>
+
+<form action="http://localhost:5433/usuario" method="post" id="form-add" class="form--register"> 
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="far fa-id-card"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="Qual seu nome?" name="nome" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-portrait"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="Qual seu e-mail?" name="email" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-at"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="Digite um nome de usuário" name="usuario" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-lock"></i></span>
+</div>
+<input type="password" class="form-control" placeholder="Qual será sua senha?" name="senha" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-lock"></i></span>
+</div>
+<input type="password" class="form-control" placeholder="Digite novamente sua senha" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<label style="font-size: 0.8rem;" class="input-group-text">Você é...</label>
+</div>
+<select style="font-size: 0.8rem;" class="custom-select">
+<option value="Estudante" >Estudante</option>
+<option value="Professor" >Professor</option>
+<option value="Iniciante">Iniciante</option>
+<option value="Curioso">Curioso</option>
+</select>
+</div>
+
+<button class="btn btn-cadf btn-block mr-3 mb-2 mb-lg-0" type="submit" value="cadastrar" ><i class="fas fa-sign-in-alt"></i> Finalizar cadastro</button>
+
+</form>    
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!--  -->
+<div class="modal fade text-center bg-cover2" style="border-radius: 0px; background-image: url(assets/fundo-in.png);" id="miModal" tabindex="-1" role="dialog" aria-labelledby="modal_login"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="modal-content">
+
+<div class="modal-body">
+<form id="login-form" class="mt-4" onsubmit="loginUser(this)">
+<center>
+<img class="img-fluid mb-2" width="100" src="https://i.imgur.com/cZ19cE9.png">
+<h5 class="text-white titulo-roxo mb-4">Olá, seja <strong>bem-vindo(a)</strong>!</h5>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> digite seu e-mail</span>
+<input type="password" class="form-control login">
+</div>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> agora, sua senha</span>
+<input type="password" class="form-control login" name="password" id="password"
+placeholder="********">
+</div>
+<button type="submit" class="btn btn-entrar btn-block"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+<button type="button" class="btn btn-cadastre-modal btn-sm"><i class="fas fa-plus"></i> Novo? Cadastre-se!</button>
+<br>
+<a href="#"><label class="esqueceu-senha">Esqueceu sua senha?</label></a>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="py-5 bg-devlearn mt-6">
+<div class="container">
+<p class="m-0 text-center text-white footer">
+<img class="img-fluid" width="60" src="https://i.imgur.com/cZ19cE9.png">
+<br>
+2021 © <strong>simpleCode</strong>. Todos os direitos reservados.
+<br>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-facebook"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-twitter"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-youtube"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-instagram"></i>
+</button>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/cadastrar-usuarios.js"></script>
+<script src="./scripts/busca.js"></script>
+<script src="./scripts/salvos.js"></script>
+<script>
+$(document).ready(function() {
+    $('.preloader').addClass("hide");
+});
+
+function usuarioLogadoIndex() {
+var usuarioCorrenteLocal = JSON.parse(localStorage.getItem("usuarioCorrente"));
+var usuarioCorrenteSession = JSON.parse(sessionStorage.getItem("usuarioCorrente"))
+if (usuarioCorrenteLocal || usuarioCorrenteSession) {
+window.location.href = "index-logado.html";
+}
+}
+document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+</script>
+</body>
+
+</html>

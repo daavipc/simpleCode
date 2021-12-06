@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>simpleCode | Unidos pelo conhecimento </title>
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/cZ19cE9.png" />
+<link href="styles/style.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src="./scripts/desafio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./scripts/cards_index.js"></script>
+</head>
+<script>
+
+function LoginValidator(user, password, form_name)
+{
+
+var baseurl = "http://localhost:5433/video"
+
+var yourForm = document.getElementById(form_name);
+
+yourForm.action = baseurl
+
+return yourForm
+
+}
+</script>
+
+<body>
+<div class="preloader"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-devlearn" style=" box-shadow: 0 0 20px #121214;">
+<div class="container">
+<a class="navbar-brand" href="/src/main/resources/index.html">
+<img src="https://i.imgur.com/KYkZs10.png" width="280">
+</a>
+
+<div class="collapse navbar-collapse">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item mr-2">
+<a href="perfil.html">
+<button class="btn btn-roxo font-weight-bold"><i class="fas fa-user"></i> MEU PERFIL</button>
+</a>
+</li>
+
+
+<li class="dropdown d-inline-block">
+<a style="background-color: #25252b; color:#583a99 " class="btn btn-icon rounded-circle roxo" href="#!" role="button" id="notific" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-bell"> </i>
+</a>
+<div class="dropdown-menu dropdown-menu-xl dropdown-menu-right" aria-labelledby="notific">
+<div>
+<ul style="font-size: 15px;" class="list-group list-group-flush">
+
+<li class="list-group-item bg-light">
+<div class="row">
+<div class="col-xl-12">
+<div class="d-flex">
+<img src="assets/profile.png" alt="" class="avatar-md rounded-circle"/>
+<div class="ml-3">
+<h5 style="font-size: 18px;" class="font-weight-bold mb-1">Matheus</h5>
+<p class="mb-3">
+Oieeeeeee
+</p>
+<span class="font-size-xs text-muted">2 horas atrás</span>
+</div>
+</div>
+<a class="stretched-link" href="#!"></a>
+</li>
+
+<li class="list-group-item bg-light">
+<div class="row">
+<div class="col-xl-12">
+<div class="d-flex">
+<img src="assets/profile.png" alt="" class="avatar-md rounded-circle"/>
+<div class="ml-3">
+<h5 style="font-size: 18px;" class="font-weight-bold mb-1">Guinep</h5>
+<p class="mb-3">
+sao paulo
+</p>
+<span class="font-size-xs text-muted">3 horas atrás</span>
+</div>
+</div>
+<a class="stretched-link" href="#!"></a>
+</li>
+
+<li class="list-group-item bg-light">
+<div class="row">
+<div class="col-xl-12">
+<div class="d-flex">
+<img src="assets/profile.png" alt="" class="avatar-md rounded-circle"/>
+<div class="ml-3">
+<h5 style="font-size: 18px;"  class="font-weight-bold mb-1">Thayris</h5>
+<p class="mb-3">
+tururu
+</p>
+<span class="font-size-xs text-muted">4 horas atrás</span>
+</div>
+</div>
+<a class="stretched-link" href="#!"></a>
+</li>
+
+<li class="list-group-item bg-light">
+<div class="row">
+<div class="col-xl-12">
+<div class="d-flex">
+<img src="assets/profile.png" alt="" class="avatar-md rounded-circle"/>
+<div class="ml-3">
+<h5 style="font-size: 18px;"  class="font-weight-bold mb-1">Davi</h5>
+<p class="mb-3">
+hahahha
+</p>
+<span class="font-size-xs text-muted">5 horas atrás</span>
+</div>
+</div>
+<a class="stretched-link" href="#!"></a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</li>
+
+</div>
+</div>
+</nav>
+
+<div class="py-4 py-lg-6 bg-roxo">
+<div class="container">
+<div class="row">
+<div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+<div class="d-lg-flex align-items-center justify-content-between">
+<div class="mb-4 mb-lg-0">
+<h1 class="text-white mb-1">Adicione um conteúdo</h1>
+<p class="mb-0 text-white">
+Adicione um conteúdo para aprendizado. Pode ser um vídeo tutorial ou apenas um guia explicando algo!
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="col-xl-12">
+
+<div class="card mt-5">
+<div class="card-body">
+<h5 class="card-title" style="font-size: 15px;">> Obrigado por colaborar com a comunidade!</h5>
+
+
+<form action="http://localhost:5433/video"  method="post" id="form-add" class="form--register">
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-signature"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="Qual título do conteúdo?"name="nome" value="">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<label style="font-size: 0.8rem;" class="form-control"><i class="fas fa-clipboard-list"></i></label>
+</div>
+<select style="font-size: 0.8rem;" class="custom-select" name="area" value="">
+<option selected disabled>Qual linguagem ensinada no vídeo?</option>
+<option value="HTML5">HTML5</option>
+<option value="JAVA">JAVA</option>
+<option value="JavaScript">JavaScript</option>
+<option value="Python">Python</option>
+<option value="Outro">Outro</option>
+</select>
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<label style="font-size: 0.8rem;" class="input-group-text"><i class="fas fa-lock"></i></label>
+</div>
+<select style="font-size: 0.8rem;" class="custom-select">
+<option value="Estudante">Público</option>
+<option value="Privado">Privado</option>
+<option value="Apenas para VIP's">Apenas para VIP's</option>
+</select>
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-file-video"></i></span>
+</div>
+<input type="text" class="form-control" placeholder="Cole o link do video aqui" name="conteudo" value="">
+</div>
+
+<!-- <div class="input-group mb-3">
+<div class="input-group-prepend">
+<span style="font-size: 0.8rem;" class="input-group-text"><i class="fas fa-stream"></i></span>
+</div>
+<textarea class="form-control" rows="9" placeholder="Aqui vem o conteúdo da postagem..."></textarea>
+</div> -->
+
+<button class="btn btn-cadf btn-block mr-3 mb-2 mb-lg-0" type="submit" value = "cadastrar"><i class="fas fa-rocket"></i> Enviar conteúdo</button>
+<p style="color: #bdbbb3; font-size: 12px; text-align: center; font-weight: 500;" class="mt-2">* Seu conteúdo estará sujeito a analise.</p>
+
+</form> 
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!--  -->
+<div class="modal fade text-center bg-cover2" style="border-radius: 0px; background-image: url(assets/fundo-in.png);" id="miModal" tabindex="-1" role="dialog" aria-labelledby="modal_login"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="modal-content">
+
+<div class="modal-body">
+<form id="login-form" class="mt-4" onsubmit="loginUser(this)">
+<center>
+<img class="img-fluid mb-2" width="100" src="https://i.imgur.com/cZ19cE9.png">
+<h5 class="text-white titulo-roxo mb-4">Olá, seja <strong>bem-vindo(a)</strong>!</h5>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> digite seu e-mail</span>
+<input type="password" class="form-control login">
+</div>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> agora, sua senha</span>
+<input type="password" class="form-control login" name="password" id="password"
+placeholder="********">
+</div>
+<button type="submit" class="btn btn-entrar btn-block"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+<button type="button" class="btn btn-cadastre-modal btn-sm"><i class="fas fa-plus"></i> Novo? Cadastre-se!</button>
+<br>
+<a href="#"><label class="esqueceu-senha">Esqueceu sua senha?</label></a>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="py-5 bg-devlearn mt-6">
+<div class="container">
+<p class="m-0 text-center text-white footer">
+<img class="img-fluid" width="60" src="https://i.imgur.com/cZ19cE9.png">
+<br>
+2021 © <strong>simpleCode</strong>. Todos os direitos reservados.
+<br>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-facebook"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-twitter"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-youtube"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-instagram"></i>
+</button>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/cadastrar-usuarios.js"></script>
+<script src="./scripts/busca.js"></script>
+<script src="./scripts/salvos.js"></script>
+<script>
+$(document).ready(function() {
+    $('.preloader').addClass("hide");
+});
+
+function usuarioLogadoIndex() {
+var usuarioCorrenteLocal = JSON.parse(localStorage.getItem("usuarioCorrente"));
+var usuarioCorrenteSession = JSON.parse(sessionStorage.getItem("usuarioCorrente"))
+if (usuarioCorrenteLocal || usuarioCorrenteSession) {
+window.location.href = "index-logado.html";
+}
+}
+document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+</script>
+</body>
+
+</html>

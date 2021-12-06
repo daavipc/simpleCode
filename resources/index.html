@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>simpleCode | Unidos pelo conhecimento </title>
+<link rel="icon" type="image/x-icon" href="https://i.imgur.com/cZ19cE9.png" />
+<link href="styles/style.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/06c06c3fc2.js" crossorigin="anonymous"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src="./scripts/desafio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./scripts/cards_index.js"></script>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+    </script>
+    <script>
+        (function () {
+            window.onload = function () {
+                new BlipChat()
+                .withAppKey('c2ltcGxlYm86MDQ5YjlmMzYtMWM0MS00MTg4LWFhNDYtOGU3ZGE1NzY2N2Nh')
+                .withButton({"color":"#36ce3f","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_35b35951-5966-4499-a212-baa5310cd440"})
+                .withCustomCommonUrl('https://guilherme-vedovelo-de-britto-claro-tyd45.chat.blip.ai/')
+                .build();
+            }
+        })();
+    </script>
+                                    
+                 
+
+<div class="preloader"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-devlearn" style=" box-shadow: 0 0 20px #121214;">
+<div class="container">
+<a class="navbar-brand" href="/src/main/resources/index.html">
+<img src="https://i.imgur.com/KYkZs10.png" width="280">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link" href="#!">
+<button class="btn btn-roxo font-weight-bold" data-toggle="modal"
+data-target="#miModal">ÁREA DO MEMBRO</button>
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+<div class="py-lg-14 py-10 position-relative bg-cover" style="background-image: url(assets/fundo-in.png);">
+<div class="container">
+<div class="row align-items-center mb-6">
+<div class="col-12 col-lg-7 order-md-2 mt-5">
+<div class="mb-2 mb-md-0">
+<img src="assets/topo-img.png" alt="" class="img-fluid">
+</div>
+</div>
+<div class="col-12 col-lg-5 order-md-1">
+<h1 class="display-4 mb-5 font-weight-bold">
+Somos <span class="escreve-texto"></span><span class="cursor">&nbsp;</span><p style="font-size: 40px; line-height: 0.8;"> pelo conhecimento!</p>
+</h1>
+<ul class="list-unstyled font-size-lg mb-6 font-weight-medium" style="color: #E1E1E6">
+<li class="mb-1 d-flex"><i class="fas fa-check text-roxo mr-2"></i>Plataforma fácil de se usar e objetiva.</li>
+<li class="mb-1 d-flex"><i class="fas fa-check text-roxo mr-2"></i>Comunidade enjada em ajudar.</li>
+<li class="mb-1 d-flex"><i class="fas fa-check text-roxo mr-2"></i>Gratuito e disponível para todos!</li>
+</ul>
+
+<div class="mb-8 mt-5 mb-lg-0">
+<a href="cadastrar.html" style="text-decoration: none;"><button class="btn btn-cad mr-3 mb-2 mb-lg-0 btn-block" type="button">Criar uma conta gratuitamente</button></a>
+</div>
+
+</div>
+</div>
+
+<div class="row mt-10">
+<div class="col-xl-12 col-md-12 col-12" style="margin-bottom: -20px;">
+<div class="site-section">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="heading mb-4">
+<h2>Escolha um curso</h2>
+</div>
+</div>
+</div>
+<div class="row align-items-stretch">
+<div class="col-lg-2">
+<a href="videos_html.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fab fa-html5"></i>
+<h3>HTML5</h3>
+</a>
+</div>
+<div class="col-lg-2">
+<a href="videos_java.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fab fa-java"></i>
+<h3>JAVA</h3>
+</a>
+</div>
+<div class="col-lg-2">
+<a href="videos_python.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fab fa-python"></i>
+<h3>Python</h3>
+</a>
+</div>
+<div class="col-lg-2">
+<a href="videos_css.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fas fa-palette"></i>
+<h3>CSS</h3>
+</a>
+</div>
+<div class="col-lg-2">
+<a href="videos_c.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fas fa-copyright"></i>
+<h3>C++</h3>
+</a>
+</div>
+<div class="col-lg-2">
+<a href="videos_js.html" style="text-decoration: none;" class="cursouu">
+<i style="color: #121214;" class="fab fa-js"></i>
+<h3>JavaScript</h3>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="site-section">
+<div class="container">
+
+<div class="row align-items-center mt-5 mb-4">
+<div class="col-lg-6 mb-lg-0">
+<form action="#" class="d-flex search-form">
+<span class="icon-"></span>
+<input type="search" class="form-control mr-2" placeholder="Buscar conteúdo">
+</form>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div class="heading mb-4">
+<span class="caption">> últimos adicionados</span>
+<h2>Últimos cursos</h2>
+</div>
+</div>
+<div class="col-lg-8">
+
+<div class="d-flex tutorial-item mb-4">
+<div class="img-wrap">
+<a href="#">
+<img src="https://i.imgur.com/HFWtS3C.png" alt="img-curso" class="img-fluid">
+</a>
+</div>
+<div>
+<h3 class="badge" style="background-color: #222224;font-size: 15px;">
+<a href="#" style="color: white; text-transform: uppercase; text-decoration: nopne;">
+AULA: Aprenda Python [02]
+</a></h3>
+<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore, saepe numquam. Doloremque culpa tenetur facere quisquam, animi illum possimus!</p>
+<p class="mb-0">
+<span class="brand-angular h5"></span>
+<span class="brand-javascript h5"></span>
+</p>
+<p>
+<span class="badge mr-2 mb-2"><i class="fas fa-clock"></i> 1 hora 30 min</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-layer-group"></i> Iniciante</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-calendar"></i> 16.10.2021</span>
+</p>
+<p><a href="#" class="btn btn-primary btn-sm offset"><i class="fas fa-eye"></i></a></p>
+</div>
+</div>
+
+<div class="d-flex tutorial-item mb-4">
+<div class="img-wrap">
+<a href="#">
+<img src="https://i.imgur.com/HFWtS3C.png" alt="img-curso" class="img-fluid">
+</a>
+</div>
+<div>
+<h3 class="badge" style="background-color: #222224;font-size: 15px;">
+<a href="#" style="color: white; text-transform: uppercase; text-decoration: nopne;">
+AULA: Aprenda Python [02]
+</a></h3>
+<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore, saepe numquam. Doloremque culpa tenetur facere quisquam, animi illum possimus!</p>
+<p class="mb-0">
+<span class="brand-angular h5"></span>
+<span class="brand-javascript h5"></span>
+</p>
+<p>
+<span class="badge mr-2 mb-2"><i class="fas fa-clock"></i> 1 hora 30 min</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-layer-group"></i> Iniciante</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-calendar"></i> 16.10.2021</span>
+</p>
+<p><a href="#" class="btn btn-primary btn-sm offset"><i class="fas fa-eye"></i></a></p>
+</div>
+</div>
+
+<div class="d-flex tutorial-item mb-4">
+<div class="img-wrap">
+<a href="#">
+<img src="https://i.imgur.com/HFWtS3C.png" alt="img-curso" class="img-fluid">
+</a>
+</div>
+<div>
+<h3 class="badge" style="background-color: #222224;font-size: 15px;">
+<a href="#" style="color: white; text-transform: uppercase; text-decoration: nopne;">
+AULA: Aprenda Python [02]
+</a></h3>
+<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore, saepe numquam. Doloremque culpa tenetur facere quisquam, animi illum possimus!</p>
+<p class="mb-0">
+<span class="brand-angular h5"></span>
+<span class="brand-javascript h5"></span>
+</p>
+<p>
+<span class="badge mr-2 mb-2"><i class="fas fa-clock"></i> 1 hora 30 min</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-layer-group"></i> Iniciante</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-calendar"></i> 16.10.2021</span>
+</p>
+<p><a href="#" class="btn btn-primary btn-sm offset"><i class="fas fa-eye"></i></a></p>
+</div>
+</div>
+
+<div class="d-flex tutorial-item mb-4">
+<div class="img-wrap">
+<a href="#">
+<img src="https://i.imgur.com/HFWtS3C.png" alt="img-curso" class="img-fluid">
+</a>
+</div>
+<div>
+<h3 class="badge" style="background-color: #222224;font-size: 15px;">
+<a href="#" style="color: white; text-transform: uppercase; text-decoration: nopne;">
+AULA: Aprenda Python [02]
+</a></h3>
+<p style="font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore, saepe numquam. Doloremque culpa tenetur facere quisquam, animi illum possimus!</p>
+<p class="mb-0">
+<span class="brand-angular h5"></span>
+<span class="brand-javascript h5"></span>
+</p>
+<p>
+<span class="badge mr-2 mb-2"><i class="fas fa-clock"></i> 1 hora 30 min</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-layer-group"></i> Iniciante</span>
+<span class="badge mr-2 mb-2"><i class="fas fa-calendar"></i> 16.10.2021</span>
+</p>
+<p><a href="#" class="btn btn-primary btn-sm offset"><i class="fas fa-eye"></i></a></p>
+</div>
+</div>
+
+<div class="paginacao-cursos" id="pag">
+<a href="#pag">&laquo;</a>
+<a href="#pag" class="active">1</a>
+<a href="#pag">2</a>
+<a href="#pag">3</a>
+<a href="#pag">&raquo;</a>
+</div>
+
+</div>
+<div class="col-lg-4">
+<div class="mb-3">
+<a href="#">
+<img src="https://i.imgur.com/EiDQ42W.png" alt="publicidade" >
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="bg-roxo mt-5"
+style="background: url(assets/explosao-cursos.png)no-repeat; background-size: cover; background-position: top center">
+<div class="container">
+<div class="row justify-content-center text-center">
+<div class="col-md-9 col-12 mt-4 mb-4">
+<h2 class="display-4 text-white">Faça parte da comunidade <br> <strong class="font-weight-bold">agora mesmo!</strong></h2>
+<div class="d-grid d-md-block mb-4">
+<a href="cadastrar.html" class="btn btn-roxu font-weight-bold">CADASTRAR</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="py-8 py-lg-18">
+<div class="container mt-5">
+<div class="heading mb-4">
+<span class="caption">> fórum</span>
+<h2>Fórum da comunidade
+<span style="float: right; font-size: 11px;"><div class="paginacao-cursos" id="forum">
+<a href="#forum" style="font-size: 14px;">&laquo;</a>
+<a href="#forum" class="active" style="border-radius: 50px;"><i class="fas fa-sync"></i></a>
+<a href="#forum" style="font-size: 14px;">&raquo;</a>
+</div>
+</h2>
+</div>
+<div class="row">
+
+<div class="col-lg-6 col-md-12 col-12">
+<div class="card mb-4" style="border: 2px solid #5618AA;">
+<div class="card-body p-7">
+<div class="d-md-flex mb-4">
+<div class="mb-3 mb-md-0">
+<img src="assets/profile.png" alt="" width="50" class="rounded-circle">
+</div>
+<div class="ml-md-4">
+<h2 class="font-weight-bold mb-1 titulo-topico">HTML é uma linguagem de programação?</h2>
+<p class="text-uppercase font-size-xs font-weight-semi-bold mb-0">
+<span class="text-dark" style="font-size: 13px; text-transform: none;">Postado por <strong style="color: #404040">Thayris</strong></span>
+<span class="ml-3 float-right" style="font-size: 11px; background-color: #404040; border-radius: 20px; padding: 4px;">Há <strong>16 horas</strong> atrás</span>
+</p>
+</div>
+</div>
+<p class="mb-4 font-size-md" style="color: #bababa">In et tempus dui, in porta dolor. Donec molestie a purus ut interdum. Donec
+quis felis dignissim, luctus libero ornare...</p>
+<p><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Ler tópico</a></p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-6 col-md-12 col-12">
+<div class="card mb-4" style="border: 2px solid #5618AA;">
+<div class="card-body p-7">
+<div class="d-md-flex mb-4">
+<div class="mb-3 mb-md-0">
+<img src="assets/profile.png" alt="" width="50" class="rounded-circle">
+</div>
+<div class="ml-md-4">
+<h2 class="font-weight-bold mb-1 titulo-topico">Bootstrap - Quais são os primeiros passos</h2>
+<p class="text-uppercase font-size-xs font-weight-semi-bold mb-0">
+<span class="text-dark" style="font-size: 13px; text-transform: none;">Postado por <strong style="color: #404040">Matheus</strong></span>
+<span class="ml-3 float-right" style="font-size: 11px; background-color: #404040; border-radius: 20px; padding: 4px;">Há <strong>18 horas</strong> atrás</span>
+</p>
+</div>
+</div>
+<p class="mb-4 font-size-md" style="color: #bababa">In et tempus dui, in porta dolor. Donec molestie a purus ut interdum. Donec
+quis felis dignissim, luctus libero ornare...</p>
+<p><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Ler tópico</a></p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-6 col-md-12 col-12">
+<div class="card mb-4" style="border: 2px solid #5618AA;">
+<div class="card-body p-7">
+<div class="d-md-flex mb-4">
+<div class="mb-3 mb-md-0">
+<img src="assets/profile.png" alt="" width="50" class="rounded-circle">
+</div>
+<div class="ml-md-4">
+<h2 class="font-weight-bold mb-1 titulo-topico">Como forçar o HTTPS em uma URL?</h2>
+<p class="text-uppercase font-size-xs font-weight-semi-bold mb-0">
+<span class="text-dark" style="font-size: 13px; text-transform: none;">Postado por <strong style="color: #404040">Davi</strong></span>
+<span class="ml-3 float-right" style="font-size: 11px; background-color: #404040; border-radius: 20px; padding: 4px;">Há <strong>22 horas</strong> atrás</span>
+</p>
+</div>
+</div>
+<p class="mb-4 font-size-md" style="color: #bababa">In et tempus dui, in porta dolor. Donec molestie a purus ut interdum. Donec
+quis felis dignissim, luctus libero ornare...</p>
+<p><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Ler tópico</a></p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-6 col-md-12 col-12">
+<div class="card mb-4" style="border: 2px solid #5618AA;">
+<div class="card-body p-7">
+<div class="d-md-flex mb-4">
+<div class="mb-3 mb-md-0">
+<img src="assets/profile.png" alt="" width="50" class="rounded-circle">
+</div>
+<div class="ml-md-4">
+<h2 class="font-weight-bold mb-1 titulo-topico">Header responsivo somente com CSS</h2>
+<p class="text-uppercase font-size-xs font-weight-semi-bold mb-0">
+<span class="text-dark" style="font-size: 13px; text-transform: none;">Postado por <strong style="color: #404040">Guinep</strong></span>
+<span class="ml-3 float-right" style="font-size: 11px; background-color: #404040; border-radius: 20px; padding: 4px;">Há <strong>1 dia</strong> atrás</span>
+</p>
+</div>
+</div>
+<p class="mb-4 font-size-md" style="color: #bababa">In et tempus dui, in porta dolor. Donec molestie a purus ut interdum. Donec
+quis felis dignissim, luctus libero ornare...</p>
+<p><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Ler tópico</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mb-8 mt-5">
+<div class="container">
+<div class="row">
+<div class="offset-xl-1 col-xl-10 col-12">
+<div class="row px-3 pt-3 pb-0 pr-lg-0 pt-lg-5 align-items-center rounded-lg border smooth-shadow-sm">
+<div class="col-lg-6 p-4 p-md-6 pt-lg-0">
+<h1 class="display-4 font-weight-bold lh-1 mb-3" style="font-size: 2.5rem">Está pronto?<br> Faça o desafio!</h1>
+<p class="lead">Faça um teste desafio que idealizamos em cima do que você aprendeu na plataforma!
+</p>
+<div class="col-md-5 col-12 pl-md-0">
+<a href="desafio.html" style="text-decoration: none;"><button class="btn btn-fz-desafio" type="button">Iniciar o desafio</button></a>
+</div>
+</div>
+
+<div class="col-lg-5 offset-lg-1 p-0 overflow-hidden
+rounded-right shadow-lg">
+<img class="rounded-top" style="filter: blur(2px); margin-top: 0px;" src="assets/desafio.png" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--  -->
+<div class="modal fade text-center bg-cover2" style="border-radius: 0px; background-image: url(assets/fundo-in.png);" id="miModal" tabindex="-1" role="dialog" aria-labelledby="modal_login"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+<span aria-hidden="true">&times;</span>
+</button>
+<div class="modal-content">
+
+<div class="modal-body">
+<form id="login-form" class="mt-4" onsubmit="loginUser(this)">
+<center>
+<img class="img-fluid mb-2" width="100" src="https://i.imgur.com/cZ19cE9.png">
+<h5 class="text-white titulo-roxo mb-4">Olá, seja <strong>bem-vindo(a)</strong>!</h5>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> digite seu e-mail</span>
+<input type="text" class="form-control login" name ="username" id="username">
+</div>
+<div class="form-group col-xl-7">
+<span style="font-size: 12px; color: white; font-weight: 600;">> agora, sua senha</span>
+<input type="password" class="form-control login" name="password" id="password"
+placeholder="********">
+</div>
+<button type="submit" class="btn btn-entrar btn-block"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+<button type="button" class="btn btn-cadastre-modal btn-sm"><i class="fas fa-plus"></i> Novo? Cadastre-se!</button>
+<br>
+<a href="#"><label class="esqueceu-senha">Esqueceu sua senha?</label></a>
+</center>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="py-5 bg-devlearn mt-6">
+<div class="container">
+<p class="m-0 text-center text-white footer">
+<img class="img-fluid" width="60" src="https://i.imgur.com/cZ19cE9.png">
+<br>
+2021 © <strong>simpleCode</strong>. Todos os direitos reservados.
+<br>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-facebook"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-twitter"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-youtube"></i>
+</button>
+<button class="btn btn-secondary btn-sm mt-3 redes-sociais borda-redes">
+<i class="fab fa-instagram"></i>
+</button>
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/cadastrar-usuarios.js"></script>
+<script src="./scripts/busca.js"></script>
+<script src="./scripts/salvos.js"></script>
+<script>
+$(document).ready(function() {
+    $('.preloader').addClass("hide");
+});
+</script>
+</body>
+
+</html>
